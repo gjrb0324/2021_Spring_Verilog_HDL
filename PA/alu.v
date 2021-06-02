@@ -21,12 +21,12 @@ module ALU(
     always @(Op)
     begin
         case (Op)
-         0 : assign Reg3 = out_add;  //addition
-         1 : assign Reg3 = out_sub; //subtraction
-         2 : assign Reg3 = out_rshift;  //shift_left
-         3 : assign Reg3 = out_lshift; //NAND gate 
-         4 : assign Reg3 = q; //NOR gate               
-         5 : assign Reg3 = r;  //AND gate  
+         0 : assign Reg3 = out_add; 
+         1 : assign Reg3 = out_sub; 
+         2 : assign Reg3 = out_rshift;  
+         3 : assign Reg3 = out_lshift; 
+         4 : assign Reg3 = q;                
+         5 : assign Reg3 = r;  
         endcase 
     end
     

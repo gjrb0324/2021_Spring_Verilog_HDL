@@ -5,23 +5,19 @@
 `include "divider.v"
 module tb_alu;
 
-    // Inputs
     reg [7:0] A;
     reg [7:0] B;
     reg [2:0] Op;
     reg c_in;
-    // Outputs
     wire [7:0] R;
 
-    // Instantiate the Unit Under Test (UUT)
-    ALU uut ( 
+    ALU alu ( 
         A,B,Op,R,c_in);
     initial begin
     
         $dumpfile("test.vcd");
         $dumpvars(0,tb_alu);
 
-        // Apply inputs.
         A = 8'b00010100;
         B = 8'b00000110;
         c_in = 1'b0;
@@ -36,3 +32,4 @@ module tb_alu;
     end
       
 endmodule
+
